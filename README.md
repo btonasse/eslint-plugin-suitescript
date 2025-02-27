@@ -2,6 +2,8 @@
 
 NetSuite SuiteScript v1/v2 linting rules for ESLint. This is a fork of the [original repo](https://github.com/acdvs/eslint-plugin-suitescript) of Adam Davies, which doesn't seem to be maintained anymore.
 
+This fork uses the newer flat file configuration files instead of `eslintrc`.
+
 ## Installation
 
 Installation per project is highly recommended:
@@ -29,12 +31,15 @@ Enable the rules that you would like to use.
 
 Or use a predefined setting for quick setup (choose one).
 
-```json
-// All available rules
-"extends": ["plugin:suitescript/all"]
+```js
+import suitescript from @btonasse/eslint-plugin-suitescript
 
-// Just the recommended rules
-"extends": ["plugin:suitescript/recommended"]
+
+export default [
+  suitescript.configs.suitescript1, // Add support for global nlapi functions
+  suitescript.configs.suitescript2, // Add support for SS2 globals (define, require, log, util)
+  ...suitescript.configs.all  // All available rules
+]
 ```
 
 ## List of supported rules

@@ -1,6 +1,6 @@
 {
   "name": "@btonasse/eslint-plugin-suitescript",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "ESLint plugin for NetSuite's SuiteScript v1/v2 API",
   "author": "Bernardo Tonasse",
   "license": "MIT",
